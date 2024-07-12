@@ -1,6 +1,6 @@
 # Install
 ```
-pip install git+https://github.com/marcocamma/pdb_reader.py
+pip install git+https://github.com/marcocamma/pdb_reader.git
 ```
 
 # Usage
