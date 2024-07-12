@@ -2,7 +2,7 @@ import pathlib
 import re
 import numpy as np
 import os
-import urllib3
+import urllib
 # g_starts=split("0 6 12 16 17 21 22 26 30 38 46 54 60 72 76 78")
 # g_lenghts=split("6 5 4 1 3 1 4 1 8 8 8 6 6 4 2 2")
 
@@ -55,7 +55,7 @@ def download_pdb(pdb_id, out_fname=None):
         "http://www.rcsb.org/pdb/download/downloadFile.do?fileFormat=pdb&compression=NO&structureId=%s"
         % pdb_id
     )
-    p = urllib3.urlopen(address)
+    p = urllib.request.urlopen(address)
     lines = p.readlines()
     if out_fname is None:
         out_fname = PATH_SCRIPT / "pdb" / f"{pdb_id}.pdb"
